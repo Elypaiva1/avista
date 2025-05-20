@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atacado - Avista Distribuidora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> (81) 99662-9266</span>
+                    <span><i class="fas fa-envelope"></i> ecompanyrepresentacoes@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                   <div class="logo">
+  <img src="images/logo-avista.png" alt="Avista Distribuidora" class="logo-img">
+</div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="varejo.html">Varejo</a></li>
+                            <li><a href="atacado.html" class="active">Atacado</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-cart">
+                        <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar produtos...">
+    <button id="searchButton"><i class="fas fa-search"></i></button>
+    <div id="searchResults" class="search-results"></div>
+</div>
+                        <a href="carrinho.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="login.html" class="login-btn"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secondary Header -->
+    <section class="secondary-header">
+        <div class="container">
+            <h1>Produtos para Atacado</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <span>Atacado</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Atacado -->
+    <section class="products">
+        <div class="container">
+            <div class="product-tabs">
+                <button class="tab-btn active" data-category="all">Todos</button>
+                <button class="tab-btn" data-category="oleo">Óleos</button>
+                <button class="tab-btn" data-category="leite">Leites</button>
+                <button class="tab-btn" data-category="outros">Outros</button>
+            </div>
+            <div class="product-grid">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <!-- Mesmo footer do index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Produtos Atacado
+        const atacadoProducts = [
+            // Óleos
+            {
+                id: 501,
+                name: "ÓLEO DE COCO REFINADO PRAIA JOYA RARA 20X900ml",
+                category: "oleo",
+                price: 382.57,
+                unitPrice: 19.13,
+                image: "images/products/oleo-coco-refinado.jpg",
+                description: "Valor unitário: R$ 19,13"
+            },
+            {
+                id: 502,
+                name: "ÓLEO DE COCO JOYA RARA VIRGEM 12X200ml",
+                category: "oleo",
+                price: 67.07,
+                unitPrice: 5.59,
+                image: "images/products/oleo-coco-virgem.jpg",
+                description: "Valor unitário: R$ 5,59"
+            },
+            {
+                id: 503,
+                name: "ÓLEO DE COCO JOYA RARA VIRGEM 6X500ml",
+                category: "oleo",
+                price: 80.05,
+                unitPrice: 13.34,
+                image: "images/products/oleo-coco-virgem-500ml.jpg",
+                description: "Valor unitário: R$ 13,34"
+            },
+            
+            // Leites
+            {
+                id: 601,
+                name: "LEITE DE COCO 12X200ml",
+                category: "leite",
+                price: 20.11,
+                unitPrice: 1.68,
+                image: "images/products/leite-coco-200ml.jpg",
+                description: "Valor unitário: R$ 1,68"
+            },
+            {
+                id: 602,
+                name: "LEITE DE COCO 12X500ml",
+                category: "leite",
+                price: 41.04,
+                unitPrice: 3.42,
+                image: "images/products/leite-coco-500ml.jpg",
+                description: "Valor unitário: R$ 3,42"
+            },
+            
+            // Outros
+            {
+                id: 701,
+                name: "ÓLEO CRISTALIZADO DE PALMA JOYA RARA BALDE 14,5KG",
+                category: "outros",
+                price: 173.77,
+                image: "images/products/oleo-palma.jpg"
+            },
+            {
+                id: 702,
+                name: "ÓLEO CRISTALIZADO DE PALMA JOYA RARA CX 24KG",
+                category: "outros",
+                price: 269.14,
+                image: "images/products/oleo-palma-cx.jpg"
+            }
+        ];
+
+        // Renderiza produtos atacado
+        function renderAtacadoProducts() {
+            const container = document.querySelector('.product-grid');
+            if (!container) return;
+
+            container.innerHTML = atacadoProducts.map(product => `
+                <div class="product-card" data-id="${product.id}" data-category="${product.category}">
+                    <div class="product-img">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category === 'oleo' ? 'Óleos' : 
+                                                      product.category === 'leite' ? 'Leites' : 
+                                                      'Outros'}</span>
+                        <h3 class="product-title">${product.name}</h3>
+                        ${product.description ? `<p class="product-description">${product.description}</p>` : ''}
+                        <div class="product-price">
+                            <span class="current-price">R$ ${product.price.toFixed(2)}</span>
+                            ${product.unitPrice ? `<span class="unit-price">(Unitário: R$ ${product.unitPrice.toFixed(2)})</span>` : ''}
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Adiciona eventos aos botões
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productId = parseInt(this.closest('.product-card').getAttribute('data-id'));
+                    const product = atacadoProducts.find(p => p.id === productId);
+                    
+                    addToCart(product);
+                    
+                    // Animação de feedback
+                    this.textContent = 'Adicionado!';
+                    setTimeout(() => {
+                        this.textContent = 'Adicionar';
+                    }, 1000);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            renderAtacadoProducts();
+            
+            // Configura filtros para atacado
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.tab-btn').forEach(b => {
+                        b.classList.remove('active');
+                    });
+                    
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    const products = document.querySelectorAll('.product-card');
+                    
+                    products.forEach(product => {
+                        if (category === 'all' || product.getAttribute('data-category') === category) {
+                            product.style.display = 'block';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Avista Distribuidora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> (81) 99662-9266</span>
+                    <span><i class="fas fa-envelope"></i> ecompanyrepresentacoes@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+  <img src="images/logo-avista.png" alt="Avista Distribuidora" class="logo-img">
+</div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="varejo.html">Varejo</a></li>
+                            <li><a href="atacado.html">Atacado</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-cart">
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar produtos...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <a href="carrinho.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="login.html" class="login-btn"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secondary Header -->
+    <section class="secondary-header">
+        <div class="container">
+            <h1>Login/Cadastro</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <span>Login</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login -->
+    <section class="login-container">
+        <div class="container">
+            <form class="login-form" id="login-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-actions">
+                    <a href="#">Esqueci minha senha</a>
+                    <button type="submit" class="btn">Entrar</button>
+                </div>
+                <div class="form-switch">
+                    Não tem uma conta? <a href="#" id="switch-to-register">Cadastre-se</a>
+                </div>
+            </form>
+
+            <form class="login-form" id="register-form" style="display: none;">
+                <h2>Cadastro</h2>
+                <div class="form-group">
+                    <label for="reg-name">Nome Completo</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone">Telefone</label>
+                    <input type="tel" id="reg-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Senha</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">Confirmar Senha</label>
+                    <input type="password" id="reg-confirm-password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Cadastrar</button>
+                </div>
+                <div class="form-switch">
+                    Já tem uma conta? <a href="#" id="switch-to-login">Faça login</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <!-- Mesmo footer do index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Alternar entre login e cadastro
+        document.getElementById('switch-to-register').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        });
+        
+        document.getElementById('switch-to-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+        
+        // Formulário de login
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Aqui você pode adicionar validação e autenticação real
+            alert('Login realizado com sucesso! Redirecionando...');
+            window.location.href = 'carrinho.html';
+        });
+        
+        // Formulário de cadastro
+        document.getElementById('register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('reg-password').value;
+            const confirmPassword = document.getElementById('reg-confirm-password').value;
+            
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+            
+            // Aqui você pode adicionar validação e cadastro real
+            alert('Cadastro realizado com sucesso! Faça login para continuar.');
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

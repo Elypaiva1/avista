@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varejo - Avista Distribuidora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> (81) 99662-9266</span>
+                    <span><i class="fas fa-envelope"></i> ecompanyrepresentacoes@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+  <img src="images/logo-avista.png" alt="Avista Distribuidora" class="logo-img">
+</div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="varejo.html" class="active">Varejo</a></li>
+                            <li><a href="atacado.html">Atacado</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-cart">
+                        <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar produtos...">
+    <button id="searchButton"><i class="fas fa-search"></i></button>
+    <div id="searchResults" class="search-results"></div>
+</div>
+                        <a href="carrinho.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="login.html" class="login-btn"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secondary Header -->
+    <section class="secondary-header">
+        <div class="container">
+            <h1>Produtos para Varejo</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <span>Varejo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Varejo -->
+    <section class="products">
+        <div class="container">
+            <div class="product-tabs">
+                <button class="tab-btn active" data-category="all">Todos</button>
+                <button class="tab-btn" data-category="laticinios">Laticínios</button>
+                <button class="tab-btn" data-category="frios">Frios & Defumados</button>
+                <button class="tab-btn" data-category="congelados">Congelados</button>
+                <button class="tab-btn" data-category="secos">Produtos Secos</button>
+            </div>
+            <div class="product-grid">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <!-- Mesmo footer do index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Produtos Varejo
+        const varejoProducts = [
+            // Laticínios
+            {
+                id: 101,
+                name: "Mussarela Vitalac cx/6un valor kg",
+                category: "laticinios",
+                price: 29.40,
+                oldPrice: 32.90,
+                image: "images/products/mussarela-vitalac.jpg",
+                description: "29.40/cx ou 30.90/un"
+            },
+            {
+                id: 102,
+                name: "Mussarela Santa Terza",
+                category: "laticinios",
+                price: 33.90,
+                image: "images/products/mussarela-santa-terza.jpg",
+                description: "33.90/kg ou 34.90/un"
+            },
+            {
+                id: 103,
+                name: "Queijo Coalho Seu Francisco",
+                category: "laticinios",
+                price: 29.40,
+                image: "images/products/queijo-coalho.jpg",
+                description: "Tipo pc/1.5kg - 29,40/kg"
+            },
+            {
+                id: 104,
+                name: "Requeijão Vale Lac s/amido 1,5kg",
+                category: "laticinios",
+                price: 34.90,
+                image: "images/products/requeijao-vale-lac.jpg"
+            },
+            
+            // Frios & Defumados
+            {
+                id: 201,
+                name: "Chester lanche PERDIGÃO pc/3,75kg",
+                category: "frios",
+                price: 16.99,
+                oldPrice: 19.99,
+                image: "images/products/chester.jpg",
+                badge: "Promoção"
+            },
+            {
+                id: 202,
+                name: "Presunto de peru Perdigão pc/3.75kg",
+                category: "frios",
+                price: 26.90,
+                image: "images/products/presunto-peru.jpg"
+            },
+            {
+                id: 203,
+                name: "Bacon Manta Sadia cx/20kg",
+                category: "frios",
+                price: 34.99,
+                image: "images/products/bacon-sadia.jpg"
+            },
+            {
+                id: 204,
+                name: "Charque PA 3Laços pc/5kg",
+                category: "frios",
+                price: 33.90,
+                image: "images/products/charque.jpg"
+            },
+            
+            // Congelados
+            {
+                id: 301,
+                name: "Coxão mole ARROBA",
+                category: "congelados",
+                price: 38.90,
+                image: "images/products/coxao-mole.jpg"
+            },
+            {
+                id: 302,
+                name: "Batata French Fries 10mm cx/10kg",
+                category: "congelados",
+                price: 11.99,
+                image: "images/products/batata-fries.jpg"
+            },
+            {
+                id: 303,
+                name: "Filé de peito Canção cx/20kg",
+                category: "congelados",
+                price: 20.98,
+                image: "images/products/file-peito.jpg"
+            },
+            {
+                id: 304,
+                name: "Coxa s/c RICO cx/20kg",
+                category: "congelados",
+                price: 11.75,
+                image: "images/products/coxa-frango.jpg"
+            },
+            
+            // Produtos Secos
+            {
+                id: 401,
+                name: "Farinha Panko sc/1kg",
+                category: "secos",
+                price: 17.90,
+                image: "images/products/farinha-panko.jpg"
+            },
+            {
+                id: 402,
+                name: "Leite Integral Elege cx/12un",
+                category: "secos",
+                price: 66.35,
+                image: "images/products/leite-elege.jpg"
+            },
+            {
+                id: 403,
+                name: "Óleo Soya cx/20un",
+                category: "secos",
+                price: 179.80,
+                image: "images/products/oleo-soya.jpg"
+            },
+            {
+                id: 404,
+                name: "Caixa de pizza 35cm fr/25cx",
+                category: "secos",
+                price: 29.40,
+                image: "images/products/caixa-pizza.jpg"
+            }
+        ];
+
+        // Renderiza produtos varejo
+        function renderVarejoProducts() {
+            const container = document.querySelector('.product-grid');
+            if (!container) return;
+
+            container.innerHTML = varejoProducts.map(product => `
+                <div class="product-card" data-id="${product.id}" data-category="${product.category}">
+                    <div class="product-img">
+                        <img src="${product.image}" alt="${product.name}">
+                        ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category === 'laticinios' ? 'Laticínios' : 
+                                                      product.category === 'frios' ? 'Frios & Defumados' : 
+                                                      product.category === 'congelados' ? 'Congelados' : 
+                                                      'Produtos Secos'}</span>
+                        <h3 class="product-title">${product.name}</h3>
+                        ${product.description ? `<p class="product-description">${product.description}</p>` : ''}
+                        <div class="product-price">
+                            <span class="current-price">R$ ${product.price.toFixed(2)}${product.category === 'laticinios' ? '' : '/kg'}</span>
+                            ${product.oldPrice ? `<span class="old-price">R$ ${product.oldPrice.toFixed(2)}</span>` : ''}
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Adicionar</button>
+                            <button class="wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Adiciona eventos aos botões
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productId = parseInt(this.closest('.product-card').getAttribute('data-id'));
+                    const product = varejoProducts.find(p => p.id === productId);
+                    
+                    addToCart(product);
+                    
+                    // Animação de feedback
+                    this.textContent = 'Adicionado!';
+                    setTimeout(() => {
+                        this.textContent = 'Adicionar';
+                    }, 1000);
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            renderVarejoProducts();
+            setupCategoryFilters();
+        });
+    </script>
+</body>
+</html>

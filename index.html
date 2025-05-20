@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avista - Distribuidora de Alimentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> (81) 99662-9266</span>
+                    <span><i class="fas fa-envelope"></i> avistadist@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+  <img src="images/logo-avista.png" alt="Avista Distribuidora" class="logo-img">
+</div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="varejo.html">Varejo</a></li>
+                            <li><a href="atacado.html">Atacado</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-cart">
+                        <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar produtos...">
+    <button id="searchButton"><i class="fas fa-search"></i></button>
+</div>
+<!-- Adicione esta div para mostrar os resultados -->
+<div id="searchResults" class="search-results"></div>
+
+                        <a href="carrinho.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="login.html" class="login-btn"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Os melhores produtos para seu negócio</h1>
+                <p>Trabalhamos somente à vista para oferecer os melhores preços do mercado. Atendemos varejo e atacado com qualidade e agilidade.</p>
+                <div class="banner-btns">
+                    <a href="varejo.html" class="btn">Ver Varejo</a>
+                    <a href="atacado.html" class="btn btn-outline">Ver Atacado</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossas Modalidades</h2>
+                <p>Todos os produtos são vendidos exclusivamente à vista</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="images/varejo.png" alt="Varejo">
+                    </div>
+                    <div class="category-info">
+                        <h3>Varejo</h3>
+                        <p>Produtos com preços especiais para compras menores</p>
+                        <a href="varejo.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="images/atacado.png" alt="Atacado">
+                    </div>
+                    <div class="category-info">
+                        <h3>Atacado</h3>
+                        <p>Condições especiais para compras em grande quantidade</p>
+                        <a href="atacado.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques -->
+    <section class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produtos em Destaque</h2>
+                <p>Confira nossos produtos mais vendidos</p>
+            </div>
+            <div class="product-grid">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+            <div class="text-center">
+                <a href="varejo.html" class="btn">Ver Todos os Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="images/sobre.png" alt="Sobre a Avista">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre a Avista Distribuidora</h2>
+                    <p>A Avista Distribuidora é uma empresa especializada na distribuição de alimentos para o varejo e atacado, com foco em qualidade, preço competitivo e atendimento personalizado.</p>
+                    <p>Nossa política de vendas exclusivamente à vista nos permite oferecer os melhores preços do mercado, repassando toda a economia para nossos clientes.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div>
+                                <h4>Pagamento à Vista</h4>
+                                <p>Melhores preços com pagamento na entrega ou via PIX.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h4>Entrega Rápida</h4>
+                                <p>Entregamos em todo o Recife e região metropolitana.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div>
+                                <h4>Qualidade Garantida</h4>
+                                <p>Trabalhamos apenas com os melhores fornecedores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Cadastre-se para Ofertas</h2>
+            <p>Receba nossas promoções e novidades diretamente no seu e-mail.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre Nós</h3>
+                    <p>A Avista Distribuidora é especializada em alimentos para varejo e atacado, com os melhores preços à vista e qualidade garantida.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Úteis</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="varejo.html">Varejo</a></li>
+                        <li><a href="atacado.html">Atacado</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Formas de Pagamento</h3>
+                    <ul class="footer-links">
+                        <li>À Vista na Entrega</li>
+                        <li>PIX (Chave: 46.253.263/0001-03)</li>
+                        <li>Dinheiro</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span>Endereço: Recife, PE</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+                            <span>(81) 99662-9266</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span>ecompanyrepresentacoes@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-id-card"></i></span>
+                            <span>CNPJ: 46.253.263/0001-03</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Avista Distribuidora. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Adicione este trecho antes do fechamento do </body> -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  // Configuração do Supabase
+  const supabaseUrl = 'https://fievmwjyzhrpelxiacib.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpZXZtd2p5emhycGVseGlhY2liIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDE0ODQsImV4cCI6MjA2MjU3NzQ4NH0.6ByEiZmtsE1cGkhrPd66ETtqD3p_sKvmCE9o1_WF24U';
+  const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+  // Carregar produtos em destaque
+  async function carregarProdutos() {
+    const { data, error } = await supabase.from('products').select('*').limit(6);
+
+    if (error) {
+      console.error('Erro ao buscar produtos:', error.message);
+      return;
+    }
+
+    const grid = document.querySelector('.product-grid');
+    if (!grid) return;
+
+    grid.innerHTML = ''; // limpa os produtos estáticos
+
+    data.forEach(prod => {
+      const div = document.createElement('div');
+      div.className = 'product-card';
+      div.innerHTML = `
+        <h3>${prod.nome}</h3>
+        <p>${prod.descricao || ''}</p>
+        <strong>R$ ${prod.preco.toFixed(2)}</strong>
+        <button onclick="adicionarCarrinho('${prod.id}', '${prod.nome}', ${prod.preco})">Adicionar ao carrinho</button>
+      `;
+      grid.appendChild(div);
+    });
+  }
+
+  // Adicionar item ao carrinho (usando localStorage)
+  function adicionarCarrinho(id, nome, preco) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    carrinho.push({ id, nome, preco });
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    alert('Produto adicionado ao carrinho!');
+  }
+
+  // Inicializar
+  carregarProdutos();
+</script>
+</body>
+</html>
